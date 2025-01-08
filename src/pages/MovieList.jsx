@@ -7,7 +7,7 @@ const MovieList = () => {
     const [dataMovie, setDataMovie] = useState([]);
     const { search } = useContext(SearchContext);
     useEffect(() => {
-      fetch("https://api.themoviedb.org/3/movie/popular?api_key=59d5a475554ef6dac15ec2dc29ee6014")
+      fetch("https://api.themoviedb.org/3/movie/popular?api_key=API_KEY")
       .then((response) => response.json())
       .then((data) => {
         let moviesFiltered = [];

@@ -12,13 +12,13 @@ const MovieDetails = () => {
     const [ casts, setcasts ] = useState([]);
     const { addToWishlist } = useContext(WishlistContext);
     useEffect(() => {
-        fetch("https://api.themoviedb.org/3/movie/" + id + "/credits?api_key=59d5a475554ef6dac15ec2dc29ee6014")
+        fetch("https://api.themoviedb.org/3/movie/" + id + "/credits?api_key=API_KEY")
         .then((response) => response.json())
         .then((dataCast) => setcasts(dataCast.cast.slice(0, 10)))
-        fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=59d5a475554ef6dac15ec2dc29ee6014")
+        fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=API_KEY")
         .then((response) => response.json())
         .then((dataMovies) => setMovie(dataMovies))
-        fetch("https://api.themoviedb.org/3/movie/" + id + "/similar?api_key=59d5a475554ef6dac15ec2dc29ee6014")
+        fetch("https://api.themoviedb.org/3/movie/" + id + "/similar?api_key=API_KEY")
         .then((response) => response.json())
         .then((dataMoviesSimilar) => setMovieSimilar(dataMoviesSimilar.results))
     }, [])
