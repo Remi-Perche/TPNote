@@ -1,0 +1,134 @@
+/* Container principal des détails du film */
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 96vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.movieSimilar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+.btnWishlist {
+    width: 2%;
+    padding: 10px;
+    color: #ff4d4d;
+    background-color: #f9f9f9;
+    border: 2px solid #ff4d4d;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.btnWishlist:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.1);
+}
+
+.movie-poster {
+    flex: 1;
+    max-width: 300px;
+    height: auto;
+    border-right: 1px solid #ddd;
+    object-fit: cover;
+}
+
+.movie-info {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-info h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.movie-info p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.movie-overview {
+    margin-top: 16px;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.movie-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.movie-actions a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.movie-actions a:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .movie-details {
+        flex-direction: column;
+    }
+
+    .movie-poster {
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .movie-info {
+        padding: 15px;
+    }
+
+    .movie-info h2 {
+        font-size: 22px;
+    }
+
+    .movie-info p {
+        font-size: 14px;
+    }
+
+    .movie-overview {
+        font-size: 14px;
+    }
+}
